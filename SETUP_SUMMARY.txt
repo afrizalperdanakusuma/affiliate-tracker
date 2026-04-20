@@ -1,0 +1,128 @@
+═════════════════════════════════════════════════════════════════════════════
+                    AFFILIATE TRACKER - SETUP SUMMARY
+═════════════════════════════════════════════════════════════════════════════
+
+📁 FOLDER STRUCTURE
+───────────────────────────────────────────────────────────────────────────
+affiliate-tracker/
+├── public/              👈 Static files (HTML, favicon)
+├── src/                 👈 Source code
+│   ├── components/      👈 React components (UI)
+│   ├── hooks/           👈 Custom logic (useData.js)
+│   ├── services/        👈 Utilities (db, csvParser, format)
+│   ├── styles/          👈 CSS styling
+│   ├── App.jsx          👈 Main component
+│   └── main.jsx         👈 Entry point
+├── package.json         👈 Dependencies
+├── vite.config.js       👈 Build config
+├── .gitignore           👈 What NOT to upload
+├── README.md            👈 Documentation
+└── node_modules/        👈 Auto-created (npm install)
+
+
+🔧 INSTALL STEPS (Dalam 5 Menit)
+───────────────────────────────────────────────────────────────────────────
+
+1️⃣  PERSIAPAN
+    □ Download folder affiliate-tracker
+    □ Extract dan taruh di C:\Projects\ (atau folder pilihan)
+    □ Download Node.js dari nodejs.org (LTS version)
+
+2️⃣  INSTALL PACKAGES
+    □ Buka Terminal/CMD di folder affiliate-tracker
+    □ Ketik: npm install
+    □ Tunggu selesai (2-5 menit)
+
+3️⃣  TEST LOKAL
+    □ Ketik: npm run dev
+    □ Browser otomatis buka http://localhost:5173
+    □ Aplikasi jalan? ✅ Tekan Ctrl+C untuk stop
+
+4️⃣  SETUP GIT
+    □ Ketik: git init
+    □ Ketik: git config --global user.name "Nama Anda"
+    □ Ketik: git config --global user.email "email@anda.com"
+
+5️⃣  FIRST COMMIT
+    □ Ketik: git add .
+    □ Ketik: git commit -m "Initial commit"
+
+
+🌐 UPLOAD KE GITHUB (5 Menit Lagi)
+───────────────────────────────────────────────────────────────────────────
+
+1️⃣  BUAT REPOSITORY DI GITHUB
+    □ Login ke github.com
+    □ Klik + → New repository
+    □ Name: affiliate-tracker
+    □ Pilih Public
+    □ ⚠️  JANGAN centang "Initialize this repository"
+    □ Click "Create repository"
+
+2️⃣  COPY URL REPOSITORY
+    □ Di halaman repository, klik Code
+    □ Copy HTTPS URL:
+       https://github.com/USERNAME/affiliate-tracker.git
+
+3️⃣  PUSH KE GITHUB (Di Terminal)
+    □ git remote add origin https://github.com/USERNAME/affiliate-tracker.git
+    □ git branch -M main
+    □ git push -u origin main
+    □ Login GitHub (kalau diminta)
+
+✅ SELESAI! Cek https://github.com/USERNAME/affiliate-tracker
+
+
+📝 DAILY WORKFLOW (Setiap Kali Edit)
+───────────────────────────────────────────────────────────────────────────
+
+RUN LOCAL:        │  PUSH KE GITHUB:
+─────────────────────────────────────
+npm run dev       │  git add .
+[edit files]      │  git commit -m "Pesan"
+[test di browser] │  git push
+
+
+🎯 KEY FILES PENJELASAN
+───────────────────────────────────────────────────────────────────────────
+File                    Fungsi
+─────────────────────────────────────────────────────────────────────────
+package.json            List dependencies & scripts
+vite.config.js          Build configuration
+.gitignore              File yang jangan di-upload ke GitHub
+src/App.jsx             Component utama
+src/main.jsx            Entry point React
+public/index.html       HTML halaman utama
+
+
+⚠️  PENTING!
+───────────────────────────────────────────────────────────────────────────
+❌ JANGAN delete folder:  node_modules, .git, .gitignore
+❌ JANGAN commit:         node_modules, .env, dist
+✅ JANGAN lupa:           git push setiap selesai edit
+✅ COMMIT SERING:         Setiap fitur/fix kecil
+
+
+🆘 TROUBLESHOOTING QUICK FIX
+───────────────────────────────────────────────────────────────────────────
+Error                          Solusi
+─────────────────────────────────────────────────────────────────────────
+npm: command not found         → Reinstall Node.js, centang "Add to PATH"
+fatal: not a git repository    → Run `git init`
+authentication failed          → Generate Personal Access Token di GitHub
+Port 5173 sudah terpakai       → npm run dev -- --port 3000
+ERR! code E403 Forbidden       → Check repository visibility (Public)
+
+
+📞 RESOURCES
+───────────────────────────────────────────────────────────────────────────
+Node.js:     https://nodejs.org/
+Git:         https://git-scm.com/
+GitHub:      https://github.com/
+React:       https://react.dev/
+Vite:        https://vitejs.dev/
+
+
+═════════════════════════════════════════════════════════════════════════════
+Lebih detail? Baca: PANDUAN_INSTALL.md atau README.md
+═════════════════════════════════════════════════════════════════════════════
