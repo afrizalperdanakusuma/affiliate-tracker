@@ -1,0 +1,176 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    AFFILIATE TRACKER - STRUKTUR LENGKAP
+═══════════════════════════════════════════════════════════════════════════════
+
+📦 FOLDER STRUCTURE
+───────────────────────────────────────────────────────────────────────────────
+
+affiliate-tracker/                          ← ROOT FOLDER
+│
+├── 📂 public/                              ← STATIC FILES (Tidak berubah)
+│   ├── 📄 index.html                       Entry point HTML
+│   └── 🎨 favicon.svg                      Icon aplikasi
+│
+├── 📂 src/                                 ← SOURCE CODE (JavaScript/React)
+│   │
+│   ├── 📂 components/                      ← UI COMPONENTS
+│   │   ├── 📄 Dashboard.jsx                Dashboard halaman utama
+│   │   ├── 📄 Campaigns.jsx                Halaman daftar kampanye
+│   │   ├── 📄 Import.jsx                   Halaman import CSV
+│   │   ├── 📄 DataRaw.jsx                  Halaman data mentah
+│   │   ├── 📄 Sidebar.jsx                  Menu samping
+│   │   ├── 📄 Topbar.jsx                   Top bar navigasi
+│   │   └── 📄 Icons.jsx                    Icon components
+│   │
+│   ├── 📂 hooks/                           ← CUSTOM REACT HOOKS
+│   │   └── 📄 useData.js                   Hook data management
+│   │
+│   ├── 📂 services/                        ← BUSINESS LOGIC & UTILITIES
+│   │   ├── 📄 db.js                        Database/localStorage functions
+│   │   ├── 📄 csvParser.js                 Parse CSV files
+│   │   └── 📄 format.js                    Format/helper functions
+│   │
+│   ├── 📂 styles/                          ← CSS STYLING
+│   │   └── 📄 index.css                    Global stylesheet
+│   │
+│   ├── 📄 App.jsx                          Main React component
+│   └── 📄 main.jsx                         React entry point
+│
+├── 📂 node_modules/                        ← DEPENDENCIES (Auto-created)
+│   ├── react/
+│   ├── react-dom/
+│   └── ... (semua npm packages)
+│
+├── 📂 dist/                                ← PRODUCTION BUILD (Auto-created)
+│   ├── 📄 index.html
+│   ├── 📂 assets/
+│   └── (optimized files untuk production)
+│
+├── 📂 .git/                                ← GIT HISTORY (Auto-created)
+│   ├── 📂 objects/
+│   ├── 📂 refs/
+│   └── config
+│
+├── 📄 .gitignore                           Apa yang jangan di-upload ke Git
+├── 📄 .npmrc                               NPM configuration
+├── 📄 package.json                         ⭐ Dependencies & scripts
+├── 📄 package-lock.json                    Lock file (jangan edit)
+├── 📄 vite.config.js                       ⭐ Build configuration
+├── 📄 README.md                            ⭐ Project documentation
+│
+├── 📚 DOKUMENTASI (FILE PANDUAN)
+├── 📄 PANDUAN_INSTALL.md                   Lengkap step-by-step
+├── 📄 SETUP_SUMMARY.txt                    Quick reference (1 halaman)
+├── 📄 GIT_COMMANDS.md                      Git command cheat sheet
+├── 📄 CHECKLIST.md                         Task checklist
+├── 📄 STRUKTUR_LENGKAP.txt                 File ini
+└── 📄 struktur_folder.txt                  Simple text tree
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📋 PENJELASAN FILE PENTING
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 JANGAN DIEDIT / DIHAPUS:
+   • package-lock.json      (Lock dependencies version)
+   • .git/                  (Git history)
+   • .gitignore             (Git rules)
+
+🟡 EDIT HATI-HATI:
+   • package.json           (Tambah hanya dependencies, jangan edit version)
+   • vite.config.js         (Build configuration)
+   • .gitignore             (Hanya jika tahu apa yang dilakukan)
+
+🟢 BOLEH DIEDIT BEBAS:
+   • src/**/*.jsx           (React components)
+   • src/**/*.js            (JavaScript files)
+   • src/**/*.css           (Stylesheets)
+   • public/index.html      (HTML)
+   • README.md              (Documentation)
+
+🔵 AUTO-CREATED (Jangan commit):
+   • node_modules/          (Created by: npm install)
+   • dist/                  (Created by: npm run build)
+   • .git/                  (Created by: git init)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🔄 DATA FLOW
+═══════════════════════════════════════════════════════════════════════════════
+
+USER (Browser)
+    ↓
+public/index.html
+    ↓
+src/main.jsx (React Entry Point)
+    ↓
+src/App.jsx (Root Component)
+    ↓
+    ├─→ src/components/Sidebar.jsx
+    ├─→ src/components/Topbar.jsx
+    └─→ src/components/[Page Components]
+        ├─→ Dashboard.jsx
+        ├─→ Campaigns.jsx
+        ├─→ Import.jsx
+        └─→ DataRaw.jsx
+            ↓
+            Uses: useData.js (Hook)
+                ↓
+                Uses: db.js, csvParser.js, format.js (Services)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 MANA YANG PERLU DIEDIT?
+═══════════════════════════════════════════════════════════════════════════════
+
+Ingin tambah fitur baru?
+→ Buat component baru di src/components/
+
+Ingin ubah styling?
+→ Edit src/styles/index.css
+
+Ingin tambah fungsi utility?
+→ Edit atau buat file di src/services/
+
+Ingin ubah cara data disimpan?
+→ Edit src/services/db.js
+
+Ingin ubah header/footer?
+→ Edit src/components/Topbar.jsx atau Sidebar.jsx
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📊 FILE COUNT
+═══════════════════════════════════════════════════════════════════════════════
+
+total files yang perlu di-create/upload:
+• HTML:           1  (public/index.html)
+• JSX:            10 (App.jsx + 7 components + main.jsx)
+• JS:             4  (useData.js + 3 services)
+• CSS:            1  (index.css)
+• Config:         3  (package.json, vite.config.js, .gitignore)
+• Static:         1  (favicon.svg)
+• Docs:           5  (README, PANDUAN, SETUP_SUMMARY, GIT_COMMANDS, CHECKLIST)
+───────────────────────────────────────────────────────────────────────────
+TOTAL:           25+ files
+
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+Sebelum upload ke GitHub, pastikan:
+
+[ ] Semua file ada di tempat yang benar
+[ ] npm install berhasil (node_modules ada)
+[ ] npm run dev berjalan tanpa error
+[ ] Browser bisa buka http://localhost:5173
+[ ] Tidak ada red error di browser console
+[ ] .gitignore ada (jangan lupa!)
+[ ] package.json valid (bisa dibuka dengan text editor)
+[ ] Tidak ada file duplikat (index (1).css, index (6).html dihapus)
+[ ] Git init sudah dijalankan
+[ ] Semua files sudah di-git add & commit
+
+
+═══════════════════════════════════════════════════════════════════════════════
